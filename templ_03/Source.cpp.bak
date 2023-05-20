@@ -12,6 +12,7 @@ class SimpleFunctor
 {
 public:
 	SimpleFunctor(): m_counter_dev(0), m_sum_dev3(0){};
+	//SimpleFunctor(std::vector<int> a) : m_counter_dev(0), m_sum_dev3(0) {};
 	~SimpleFunctor() {};
 
 	int get_sum() const {return m_sum_dev3 ; }
@@ -21,6 +22,11 @@ public:
 	{
 		if ((buf % 3) == 0) { ++m_counter_dev; m_sum_dev3 += buf; }
 	}
+
+	//SimpleFunctor operator =()
+	//{
+
+	//}
 
 private:
 	int m_counter_dev;
